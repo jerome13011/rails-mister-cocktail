@@ -7,6 +7,7 @@ end
 
 ruby '2.3.3'
 
+gem 'rails-controller-testing'
 gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "simple_form"
