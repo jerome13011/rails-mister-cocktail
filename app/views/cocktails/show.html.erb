@@ -13,3 +13,5 @@
   <%= f.input :ingredient_id, collection: Ingredient.all %>
   <%= f.submit %>
 <% end %>
+<br>
+<%= link_to 'Return to Home', cocktails_path, {class: "btn btn-default"} %>
