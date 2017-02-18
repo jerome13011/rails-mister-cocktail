@@ -7,6 +7,9 @@ end
 
 ruby '2.3.3'
 
+gem "attachinary", github: "assembler/attachinary"
+gem "jquery-fileupload-rails"
+gem 'cloudinary', '1.1.0'
 gem 'figaro'
 gem 'rails-controller-testing'
 gem "bootstrap-sass"
