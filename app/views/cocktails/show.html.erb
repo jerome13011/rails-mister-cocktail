@@ -11,7 +11,14 @@
   <%= f.input :description %>
   <%= f.select :unity, collection: %w(gr. cl. l.) %>
   <%= f.input :ingredient_id, collection: Ingredient.all %>
-  <%= f.submit %>
+
+     <% @cocktail.photos.each do |photo| %>
+      <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+    <% end %>
+
+      <%= f.submit %>
 <% end %>
+
+
 <br>
 <%= link_to 'Return to Home', cocktails_path, {class: "btn btn-default"} %>
