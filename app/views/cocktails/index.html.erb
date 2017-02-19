@@ -1,23 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lists of Cocktails</h1>
-
-
-  <div class="row">
-    <dir class="container">
-      <h3>Cocktails :</h3>
+  <div class="container">
+   <h1>Lists of Cocktails</h1>
+     <h3>Cocktails :</h3>
       <% @cocktails.each do |cocktail| %>
 
-          <div><%= cocktail.name %></div>
-          <span><%= link_to 'Show', cocktail , {class: "btn btn-primary"}%></span>
+        <div class="row">
+          <h4><%= cocktail.name %></h4>
+          <span><%= link_to 'Show', cocktail , {class: "btn btn-primary btn-lg active"}%></span>
 
-          <span><%= link_to 'Edit', edit_cocktail_path(cocktail), {class: "btn btn-primary"} %></span>
+          <span><%= link_to 'Edit', edit_cocktail_path(cocktail), {class: "btn btn-success btn-lg active"} %></span>
 
-          <span class="btn btn-danger" style="color: white;"><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <button type="button" class="btn btn-danger btn-lg active"><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
       <% end %>
-    </dir>
-  </div>
+    </div>
 
-<br>
+
+
 
 <%= link_to 'New Cocktail', new_cocktail_path %>

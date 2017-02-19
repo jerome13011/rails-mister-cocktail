@@ -13,3 +13,12 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+
+
+a {
+ text-decoration: none;
+ }
+.btn-danger a{
+  color: white;
+  text-decoration: none;
+}
